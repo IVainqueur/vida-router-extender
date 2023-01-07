@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Router-Extender</title>
+		<link href="./index.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
+		<style></style>
+	</head>
+
+	<body class="p-5">
+		<h1 class="text-3xl text-black font-bold">Router-Extender</h1>
+		<section class="FilterList WhiteList px-5 pb-5">
+			<h3>
+				WhiteList WiFi Filter
+				<span data-type="whitelist">+</span>
+			</h3>
+			<div class="devices flex gap-4 pl-4"></div>
+		</section>
+		<section class="FilterList BlackList px-5 pb-5">
+			<h3>
+				Blacklist WiFi Filter
+				<span data-type="blacklist">+</span>
+			</h3>
+			<div class="devices flex gap-4 pl-4"></div>
+		</section>
+		<section class="ConnectedDevices px-5">
+			<h3>Connected Devices</h3>
+			<div class="devices flex gap-4"></div>
+		</section>
+
+		<dialog
+			class="border border-black p-4 dialog-limit"
+			data-device-name=""
+			data-device-index="">
+			<form class="" method="dialog">
+				<h1>
+					Allow
+					<span class="text-green-500">Device#index</span>
+					how many minutes?
+				</h1>
+				<div class="actual-limit flex items-center gap-2 w-full">
+					<input
+						type="number"
+						placeholder="min"
+						class="grow"
+						name="limit-duration"
+						required />
+					<button class="">Limit</button>
+				</div>
+			</form>
+		</dialog>
+		<dialog class="dialog-filterlist">
+			<form method="dialog">
+				<h1>
+					Add Device to
+					<span>FilterList</span>
+				</h1>
+				<div class="device-name flex items-center gap-2 w-full">
+					<input
+						type="text"
+						placeholder="Device MAC Address"
+						class="grow"
+						name="device-mac"
+						pattern="^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"
+						required />
+					<button class="">Add</button>
+				</div>
+			</form>
+		</dialog>
+	</body>
+	<script src="./definitions.js"></script>
+	<script src="./app.js" type="module"></script>
+</html>

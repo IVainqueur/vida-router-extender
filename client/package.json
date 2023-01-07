@@ -1,0 +1,31 @@
+{
+  "name": "router-extender",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IVainqueur/vida-router-extender.git"
+  },
+  "keywords": [
+    "router",
+    "automation",
+    "networking"
+  ],
+  "author": "IVainqueur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IVainqueur/vida-router-extender/issues"
+  },
+  "homepage": "https://github.com/IVainqueur/vida-router-extender#readme",
+  "devDependencies": {
+    "parcel": "^2.8.2"
+  },
+  "dependencies": {
+    "postcss": "^8.4.20",
+    "tailwindcss": "^3.2.4"
+  }
+}
